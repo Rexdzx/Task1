@@ -172,28 +172,28 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Porfolio isotope and filter
    */
-  let portfolionIsotope = document.querySelector('.portfolio-isotope');
+  let karyasiswanIsotope = document.querySelector('.karya-siswa-isotope');
 
-  if (portfolionIsotope) {
+  if (karyasiswanIsotope) {
 
-    let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
-    let portfolioLayout = portfolionIsotope.getAttribute('data-portfolio-layout') ? portfolionIsotope.getAttribute('data-portfolio-layout') : 'masonry';
-    let portfolioSort = portfolionIsotope.getAttribute('data-portfolio-sort') ? portfolionIsotope.getAttribute('data-portfolio-sort') : 'original-order';
+    let karyasiswaFilter = karyasiswanIsotope.getAttribute('data-karya-siswa-filter') ? karyasiswanIsotope.getAttribute('data-karya-siswa-filter') : '*';
+    let karyasiswaLayout = karyasiswanIsotope.getAttribute('data-karya-siswa-layout') ? karyasiswanIsotope.getAttribute('data-karya-siswa-layout') : 'masonry';
+    let karyasiswaSort = karyasiswanIsotope.getAttribute('data-karya-siswa-sort') ? karyasiswanIsotope.getAttribute('data-karya-siswa-sort') : 'original-order';
 
     window.addEventListener('load', () => {
-      let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
-        itemSelector: '.portfolio-item',
-        layoutMode: portfolioLayout,
-        filter: portfolioFilter,
-        sortBy: portfolioSort
+      let karyasiswaIsotope = new Isotope(document.querySelector('.karya-siswa-container'), {
+        itemSelector: '.karya-siswa-item',
+        layoutMode: karyasiswaLayout,
+        filter: karyasiswaFilter,
+        sortBy: karyasiswaSort
       });
 
-      let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
+      let menuFilters = document.querySelectorAll('.karya-siswa-isotope .karya-siswa-flters li');
       menuFilters.forEach(function (el) {
         el.addEventListener('click', function () {
-          document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
+          document.querySelector('.karya-siswa-isotope .karya-siswa-flters .filter-active').classList.remove('filter-active');
           this.classList.add('filter-active');
-          portfolioIsotope.arrange({
+          karyasiswaIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
           if (typeof aos_init === 'function') {
@@ -258,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Testimonials Slider
    */
-  new Swiper('.portfolio-details-slider', {
+  new Swiper('.karya-siswa-details-slider', {
     speed: 600,
     loop: true,
     autoplay: {
