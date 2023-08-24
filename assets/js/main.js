@@ -165,13 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Initiate glightbox
    */
-  // const glightbox = GLightbox({
-  //   selector: '.glightbox'
-  // });
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
 
-  /**
-   * Porfolio isotope and filter
-   */
+
   let karyasiswanIsotope = document.querySelector('.karya-siswa-isotope');
 
   if (karyasiswanIsotope) {
