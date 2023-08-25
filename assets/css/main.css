@@ -70,7 +70,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sections & Section Header
+# Sections & Header
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
@@ -505,7 +505,7 @@ section {
 
   .mobile-nav-toggle {
     display: block !important;
-    color: var(--color-secondary);
+    color: var(--color-secondary-light);
     font-size: 28px;
     cursor: pointer;
     line-height: 0;
@@ -552,6 +552,9 @@ section {
   padding: 120px 0 60px;
 }
 
+.hero-fullscreen .carousel-item {
+  overflow: hidden;
+}
 
 .hero-fullscreen:before {
   content: "";
@@ -1716,7 +1719,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Recent berita Posts
+# Recent Berita Posts
 --------------------------------------------------------------*/
 .recent-berita-posts .post-box {
   transition: 0.3s;
@@ -1811,6 +1814,22 @@ section {
   background: rgba(var(--color-primary-rgb), 0.85);
 }
 
+@media (max-width: 767px) {
+  .recent-berita-posts .post-box {
+    margin: 3.5em 0 0 0;
+  }
+
+  .hero-fullscreen h2 {
+    font-weight: 500;
+    text-align: center;
+    margin: 0.3em;
+  }
+
+  .hero-fullscreen p {
+    text-align: center;
+  }
+}
+
 /*--------------------------------------------------------------
 # Karya Siswa Details
 --------------------------------------------------------------*/
@@ -1874,6 +1893,89 @@ section {
 
 .karya-siswa-details .karya-siswa-description p {
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Tenaga Pendidik
+--------------------------------------------------------------*/
+.tenaga-pendidik .member .member-img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tenaga-pendidik .member .social {
+  position: absolute;
+  left: 0;
+  top: -18px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tenaga-pendidik .member .social a {
+  transition: color 0.3s;
+  color: var(--color-white);
+  background: var(--color-primary);
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.tenaga-pendidik .member .social a i {
+  line-height: 0;
+  font-size: 16px;
+}
+
+.tenaga-pendidik .member .social a:hover {
+  background: var(--color-primary-light);
+}
+
+.tenaga-pendidik .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+
+.tenaga-pendidik .member .member-info {
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);
+  background: var(--color-white);
+  margin: -50px 20px 0 20px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.tenaga-pendidik .member .member-info h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: var(--color-secondary);
+}
+
+.tenaga-pendidik .member .member-info span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.tenaga-pendidik .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--color-gray);
+}
+
+.tenaga-pendidik .member:hover .social {
+  opacity: 1;
 }
 
 /*--------------------------------------------------------------
@@ -2161,7 +2263,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# berita Sidebar
+# Berita Sidebar
 --------------------------------------------------------------*/
 .berita .sidebar {
   padding: 30px;
@@ -2317,118 +2419,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# berita Comments
---------------------------------------------------------------*/
-.berita .comments {
-  margin-top: 30px;
-}
-
-.berita .comments .comments-count {
-  font-weight: bold;
-}
-
-.berita .comments .comment {
-  margin-top: 30px;
-  position: relative;
-}
-
-.berita .comments .comment .comment-img {
-  margin-right: 14px;
-}
-
-.berita .comments .comment .comment-img img {
-  width: 60px;
-}
-
-.berita .comments .comment h5 {
-  font-size: 16px;
-  margin-bottom: 2px;
-}
-
-.berita .comments .comment h5 a {
-  font-weight: bold;
-  color: var(--color-default);
-  transition: 0.3s;
-}
-
-.berita .comments .comment h5 a:hover {
-  color: var(--color-primary);
-}
-
-.berita .comments .comment h5 .reply {
-  padding-left: 10px;
-  color: var(--color-secondary);
-}
-
-.berita .comments .comment h5 .reply i {
-  font-size: 20px;
-}
-
-.berita .comments .comment time {
-  display: block;
-  font-size: 14px;
-  color: rgba(var(--color-secondary-rgb), 0.8);
-  margin-bottom: 5px;
-}
-
-.berita .comments .comment.comment-reply {
-  padding-left: 40px;
-}
-
-.berita .comments .reply-form {
-  margin-top: 30px;
-  padding: 30px;
-  box-shadow: 0 4px 16px rgba(var(--color-black-rgb), 0.1);
-}
-
-.berita .comments .reply-form h4 {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.berita .comments .reply-form p {
-  font-size: 14px;
-}
-
-.berita .comments .reply-form input {
-  border-radius: 4px;
-  padding: 10px 10px;
-  font-size: 14px;
-}
-
-.berita .comments .reply-form input:focus {
-  box-shadow: none;
-  border-color: rgba(var(--color-primary-rgb), 0.8);
-}
-
-.berita .comments .reply-form textarea {
-  border-radius: 4px;
-  padding: 10px 10px;
-  font-size: 14px;
-}
-
-.berita .comments .reply-form textarea:focus {
-  box-shadow: none;
-  border-color: rgba(var(--color-primary-rgb), 0.8);
-}
-
-.berita .comments .reply-form .form-group {
-  margin-bottom: 25px;
-}
-
-.berita .comments .reply-form .btn-primary {
-  border-radius: 4px;
-  padding: 10px 20px;
-  border: 0;
-  background-color: var(--color-secondary);
-}
-
-.berita .comments .reply-form .btn-primary:hover {
-  background-color: rgba(var(--color-secondary-rgb), 0.8);
-}
-
-/*--------------------------------------------------------------
-# berita Home Pagination
+# Berita Pagination
 --------------------------------------------------------------*/
 .berita .berita-pagination {
   margin-top: 30px;
@@ -2463,6 +2454,158 @@ section {
 .berita .berita-pagination li.active a,
 .berita .berita-pagination li:hover a {
   color: var(--color-white);
+}
+
+
+/*--------------------------------------------------------------
+# Kontak
+--------------------------------------------------------------*/
+.kontak .map {
+  margin-bottom: 40px;
+}
+
+.kontak .map iframe {
+  border: 0;
+  width: 100%;
+  height: 400px;
+}
+
+.kontak .info {
+  padding: 40px;
+  box-shadow: 0px 2px 15px rgba(var(--color-black-rgb), 0.1);
+  overflow: hidden;
+}
+
+.kontak .info h3 {
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 2em;
+}
+
+.kontak .info-item+.info-item {
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid rgba(var(--color-secondary-rgb), 0.15);
+}
+
+.kontak .info-item i {
+  font-size: 24px;
+  color: var(--color-primary);
+  transition: all 0.3s ease-in-out;
+  margin-right: 20px;
+}
+
+.kontak .info-item h4 {
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--color-secondary);
+}
+
+.kontak .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--color-secondary-light);
+}
+
+.kontak .php-email-form {
+  width: 100%;
+  background: var(--color-white);
+}
+
+.kontak .php-email-form .form-group {
+  padding-bottom: 8px;
+}
+
+.kontak .php-email-form .error-message {
+  display: none;
+  color: var(--color-white);
+  background: var(--color-red);
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.kontak .php-email-form .error-message br+br {
+  margin-top: 25px;
+}
+
+.kontak .php-email-form .sent-message {
+  display: none;
+  color: var(--color-white);
+  background: var(--color-green);
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.kontak .php-email-form .loading {
+  display: none;
+  background: var(--color-white);
+  text-align: center;
+  padding: 15px;
+}
+
+.kontak .php-email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid var(--color-green);
+  border-top-color: var(--color-white);
+  animation: animate-loading 1s linear infinite;
+}
+
+.kontak .php-email-form input[type=text],
+.kontak .php-email-form input[type=email],
+.kontak .php-email-form textarea {
+  border-radius: 0px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.kontak .php-email-form input[type=text]:focus,
+.kontak .php-email-form input[type=email]:focus,
+.kontak .php-email-form textarea:focus {
+  border-color: var(--color-secondary-light);
+}
+
+.kontak .php-email-form input[type=text],
+.kontak .php-email-form input[type=email] {
+  height: 48px;
+  padding: 10px 15px;
+}
+
+.kontak .php-email-form textarea {
+  padding: 10px 12px;
+  height: 290px;
+}
+
+.kontak .php-email-form button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding: 13px 50px;
+  color: var(--color-white);
+  transition: 0.4s;
+  border-radius: 0;
+}
+
+.kontak .php-email-form button[type=submit]:hover {
+  background: rgba(var(--color-primary-rgb), 0.85);
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2502,9 +2645,13 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: var(--font-primary);
-  color: var(--color-white);
+  color: rgba(var(--color-secondary-light-rgb), 0.9);
 }
 
+.footer .footer-content .footer-info i {
+  color: var(--color-white);
+  margin: 0 0.5em 0 0;
+}
 
 .footer .footer-content .footer-links {
   margin-bottom: 30px;

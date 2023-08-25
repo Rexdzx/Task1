@@ -6,7 +6,6 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>School</title>
-  <!-- Favicons -->
   <link href="assets/img/icons8-popeye-office-m-32.png" rel="icon">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +26,6 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
@@ -42,8 +40,9 @@
 
           <li><a class="nav-link scrollto" href="#tentang-kami">Tentang Kami</a></li>
           <li><a class="nav-link scrollto" href="#karya-siswa">Karya Siswa</a></li>
+          <li><a class="nav-link scrollto" href="tenaga-pendidik.html">Tenaga Pendidik</a></li>
           <li><a class="nav-link scrollto" href="#recent-berita-posts" id="berita-link">Berita</a></li>
-          </li>
+          <li><a class="nav-link scrollto" href="index.html#kontak">Kontak</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav>
@@ -56,7 +55,8 @@
   <section id="hero-fullscreen" class="hero-fullscreen d-flex align-items-center">
     <div class="container d-flex flex-column align-items-center position-relative" data-aos="zoom-out">
       <h2>Welcome Back To <span>School</span></h2>
-      <p>Sekolah Yang Menciptakan Generasi Penerus Yang Memiliki Potensi Luar Biasa Untuk Menjadi Pemimpin Di Masa Depan
+      <p>Sekolah Yang Menciptakan Generasi Penerus Yang Memiliki Potensi Luar Biasa Untuk Menjadi Pemimpin Di Masa
+        Depan
       </p>
     </div>
   </section>
@@ -92,7 +92,6 @@
       </div>
     </section>
 
-    <!-- ======= Karya Siswa Section ======= -->
     <section id="karya-siswa" class="karya-siswa" data-aos="fade-up">
 
       <div class="container">
@@ -294,6 +293,87 @@
       </div>
 
     </section>
+
+    <section id="kontak" class="kontak">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Hubungi Kami</h2>
+        </div>
+
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3868.4287339273915!2d98.77582916244248!3d3.63712637802704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1692938887369!5m2!1sid!2sid"
+          allowfullscreen frameborder="0"></iframe>
+      </div><!-- End Google Maps -->
+
+      <div class="container">
+
+        <div class="row gy-5 gx-lg-5">
+
+          <div class="col-lg-4">
+
+            <div class="info">
+              <h3>Hubungi Kami</h3>
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Lokasi:</h4>
+                  <p>Medan, Sumatera Utara, ID</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@gmail.com</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Telepon:</h4>
+                  <p>+ 62 812 3456 7891</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer id="footer" class="footer">
@@ -305,12 +385,11 @@
           <div class="col-lg-4 col-md-6">
             <div class="footer-info">
               <h3>School</h3>
-              <p>
-                Jl. Perjuangan No.16 <br>
-                MDN 20115, IND<br><br>
-                <strong>Phone:</strong> +62 89899259825<br>
-                <strong>Email:</strong> school@example.com<br>
-              </p>
+              <div class="mt-4">
+                <p class="my-2"><i class='bi bi-geo-alt '></i> Medan, Sumatera Utara, ID</p>
+                <p class="my-2"><i class="bi bi-envelope"></i> info@gmail.com</p>
+                <p class="my-2"><i class="bi bi-phone"></i> + 62 812 3456 7891</p>
+              </div>
             </div>
           </div>
           <div class="col-lg-8 text-center">
@@ -319,9 +398,10 @@
               <li><a href="index.html#tentang-kami">Tentang Kami</a></li>
               <li><a href="index.html#karya-siswa">Karya Siswa</a></li>
               <li><a href="berita.html">Berita</a></li>
+              <li><a href="index.html#kontak">Kontak</a></li>
             </ul>
             <div class="sit">
-              <h4>Stay in touch</h4>
+              <h4>Tetap Terhubung</h4>
             </div>
             <div class="social-links mb-3 mb-lg-0 text-center">
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
