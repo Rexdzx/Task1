@@ -552,8 +552,12 @@ section {
   padding: 120px 0 60px;
 }
 
-.hero-fullscreen .carousel-item {
-  overflow: hidden;
+.hero-fullscreen .img {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0 60px;
 }
 
 .hero-fullscreen:before {
@@ -602,31 +606,6 @@ section {
 
 .hero-fullscreen .btn-get-started:hover {
   background: rgba(var(--color-primary-rgb), 0.8);
-}
-
-.hero-fullscreen .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  font-family: var(--font-secondary);
-  color: var(--color-secondary);
-  font-weight: 600;
-}
-
-.hero-fullscreen .btn-watch-video i {
-  color: var(--color-primary);
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
-}
-
-.hero-fullscreen .btn-watch-video:hover {
-  color: var(--color-primary);
-}
-
-.hero-fullscreen .btn-watch-video:hover i {
-  color: rgba(var(--color-primary-rgb), 0.8);
 }
 
 @media (max-width: 640px) {
