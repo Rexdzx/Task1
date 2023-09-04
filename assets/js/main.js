@@ -4,11 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
+  const loader = document.querySelector('.loader');
+  if (loader) {
     window.addEventListener('load', () => {
-      preloader.remove();
+      loader.remove();
     });
+  }
+
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("header").style.display = "none";
+
+  window.onload = function () {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("header").style.display = "block";
   }
 
   /**
