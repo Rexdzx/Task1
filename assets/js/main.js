@@ -4,12 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Preloader
    */
-  const loader = document.querySelector('.loader');
-  if (loader) {
-    window.addEventListener('load', () => {
-      loader.remove();
-    });
-  }
+  let loader = document.getElementById('loader');
+  let header = document.getElementById('header');
+
+  // Menampilkan header setelah load selesai
+  window.addEventListener('load', function () {
+    loader.remove();
+    header.style.display = 'block';
+  });
+
   /**
    * Sticky header on scroll
    */
