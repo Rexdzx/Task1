@@ -24,7 +24,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
 
   <header id="header" class="header fixed-top" data-scrollto-offset="0">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -435,6 +435,19 @@
 
       window.location.href = 'berita.html';
     })
+
+    let loader = document.getElementById('loader');
+    let header = document.getElementById('header');
+    let body = document.body;
+
+    // Menampilkan header setelah load selesai
+    window.addEventListener('load', function () {
+      loader.remove();
+      header.style.display = 'block';
+      body.style.overflow = 'auto';
+    });
+
+    body.style.overflow = 'hidden';
   </script>
 
 </body>
