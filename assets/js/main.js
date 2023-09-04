@@ -10,15 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       loader.remove();
     });
   }
-
-  document.getElementById("loader").style.display = "block";
-  document.getElementById("header").style.display = "none";
-
-  window.onload = function () {
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("header").style.display = "block";
-  }
-
   /**
    * Sticky header on scroll
    */
