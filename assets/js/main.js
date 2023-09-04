@@ -6,13 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
    */
   let loader = document.getElementById('loader');
   let header = document.getElementById('header');
+  let body = document.body;
 
   // Menampilkan header setelah load selesai
   window.addEventListener('load', function () {
     loader.remove();
     header.style.display = 'block';
+    body.style.overflow = 'auto';
   });
 
+  body.style.overflow = 'hidden';
   /**
    * Sticky header on scroll
    */

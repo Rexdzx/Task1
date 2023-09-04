@@ -1804,6 +1804,13 @@ section {
   .hero-fullscreen p {
     text-align: center;
   }
+
+  #loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 /*--------------------------------------------------------------
